@@ -41,6 +41,9 @@ export default function Footer(props) {
           <span>Imersão React da Alura</span>
         </a>
       </p>
+      <a href="https://www.pedrinholeda.github.io">
+        <img src="https://i.imgur.com/NDzZuEH.png" alt="Logo Pedro" />
+      </a>
     </FooterWrapper>
   );
 }
