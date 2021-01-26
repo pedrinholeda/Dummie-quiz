@@ -22,11 +22,6 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
   }
   #__next {
-    //enquanto nao sai a logo
-    margin-top: 170px;
-
-
-
     flex: 1;
     display: flex;
     flex-direction: column;
