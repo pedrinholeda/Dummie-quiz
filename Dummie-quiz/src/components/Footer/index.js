@@ -1,12 +1,11 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
   background-color: #00000070;
   padding: 20px;
   display: flex;
   align-items: center;
-  border-radius: 4px; 
+  border-radius: 4px;
   img {
     width: 58px;
     margin-right: 23px;
@@ -14,10 +13,10 @@ const FooterWrapper = styled.footer`
   a {
     color: white;
     text-decoration: none;
-    transition: .3s;
+    transition: 0.3s;
     &:hover,
     &:focus {
-      opacity: .5;
+      opacity: 0.5;
     }
     span {
       text-decoration: underline;
@@ -30,18 +29,22 @@ export default function Footer(props) {
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+        <img
+          src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg"
+          alt="Logo Alura"
+        />
       </a>
       <p>
-        Orgulhosamente criado durante
-        {' '}
-        a
-        {' '}
+        Orgulhosamente criado durante a{" "}
         <a href="https://www.alura.com.br/">
-          <span>Imersão React da Alura</span>
+          <span>Imersão React </span>
+        </a>
+        {" "}por{" "}
+        <a href="https://pedrinholeda.github.io/">
+          <span>Pedro Léda.</span>
         </a>
       </p>
-      <a href="https://www.pedrinholeda.github.io">
+      <a href="https://pedrinholeda.github.io/">
         <img src="https://i.imgur.com/NDzZuEH.png" alt="Logo Pedro" />
       </a>
     </FooterWrapper>

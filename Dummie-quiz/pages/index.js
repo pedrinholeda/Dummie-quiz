@@ -1,15 +1,19 @@
 import styled from "styled-components";
-import db from "../db.json";
+import React from "react";
+import { useRouter } from "next/router";
+// eslint-disable-next-line import/no-unresolved
+import Head from "next/head";
 
+import db from "../db.json";
 import Widget from "../src/components/Widget/index";
 import Footer from "../src/components/Footer/index";
 import GitHubCorner from "../src/components/GitHubCorner/index";
 import QuizBackground from "../src/components/QuizBackground/index";
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
+// const Title = styled.h1`
+//   font-size: 50px;
+//   color: ${({ theme }) => theme.colors.primary};
+// `;
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -30,15 +34,40 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <Head>
+          <title>Dummie Quiz</title>
+        </Head>
         <Widget>
           <Widget.Header>
             <h1> The Dummie Quiz</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>O quiz mais inutil quie você verá.</p>
+            <form
+              onSubmit={function (infosDoEvento) {
+                infosDoEvento.preventDefault();
+
+                router.push(`quiz?name=${name}`);
+                console.log("teste");
+              }}
+            >
+              <input
+                onChange={function (infosDoEvento) {
+                  // name = infosDoEvento.target.value;
+                  setName(infosDoEvento.target.value);
+                }}
+                placeholder="diz ai seu nome "
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Vamos Jogar, {name}
+              </button>
+            </form>
+            <p>O quiz sobre conhecimentos gerais inuteis.</p>
           </Widget.Content>
         </Widget>
         <Widget>
