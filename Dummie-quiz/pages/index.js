@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "next/router";
 // eslint-disable-next-line import/no-unresolved
 import Head from "next/head";
-
+import Logo from '../src/components/QuizLogo';
 import db from "../db.json";
 import Widget from "../src/components/Widget/index";
 import Footer from "../src/components/Footer/index";
@@ -39,10 +39,11 @@ export default function Home() {
 
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <Head>
+      <Head>
           <title>Dummie Quiz</title>
         </Head>
+      <QuizContainer>
+      <Logo />
         <Widget>
           <Widget.Header>
             <h1> The Dummie Quiz</h1>
