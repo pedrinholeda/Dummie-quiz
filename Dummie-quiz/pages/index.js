@@ -1,14 +1,16 @@
-import styled from "styled-components";
-import React from "react";
-import { useRouter } from "next/router";
+import styled from 'styled-components';
+import React from 'react';
+import { useRouter } from 'next/router';
 // eslint-disable-next-line import/no-unresolved
-import Head from "next/head";
-import Logo from '../src/components/QuizLogo';
-import db from "../db.json";
-import Widget from "../src/components/Widget/index";
-import Footer from "../src/components/Footer/index";
-import GitHubCorner from "../src/components/GitHubCorner/index";
-import QuizBackground from "../src/components/QuizBackground/index";
+import Head from 'next/head';
+import QuizLogo from '../src/components/QuizLogo';
+import db from '../db.json';
+import Widget from '../src/components/Widget/index';
+import Footer from '../src/components/Footer/index';
+import GitHubCorner from '../src/components/GitHubCorner/index';
+import QuizBackground from '../src/components/QuizBackground/index';
+import Input from '../src/components/Input/index';
+import Button from '../src/components/Button/index';
 
 // const Title = styled.h1`
 //   font-size: 50px;
@@ -22,7 +24,7 @@ import QuizBackground from "../src/components/QuizBackground/index";
 //   background-position: center;
 // `;
 
-export const QuizContainer = styled.div`
+const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
   padding-top: 45px;
@@ -43,7 +45,7 @@ export default function Home() {
           <title>Dummie Quiz</title>
         </Head>
       <QuizContainer>
-      <Logo />
+      <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1> The Dummie Quiz</h1>
@@ -54,19 +56,18 @@ export default function Home() {
                 infosDoEvento.preventDefault();
 
                 router.push(`quiz?name=${name}`);
-                console.log("teste");
+                console.log('teste');
               }}
             >
-              <input
-                onChange={function (infosDoEvento) {
-                  // name = infosDoEvento.target.value;
-                  setName(infosDoEvento.target.value);
-                }}
-                placeholder="diz ai seu nome "
+               <Input
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
+                placeholder="Diz ai seu nome"
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Vamos Jogar, {name}
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Vamos Jogar ${name}`}
+              </Button>
             </form>
             <p>O quiz sobre conhecimentos gerais inuteis.</p>
           </Widget.Content>

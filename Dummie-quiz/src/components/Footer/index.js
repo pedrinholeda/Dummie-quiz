@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
@@ -39,7 +40,7 @@ export default function Footer(props) {
         <a href="https://www.alura.com.br/">
           <span>Imersão React </span>
         </a>
-        {" "}por{" "}
+        {" "} por {" "}
         <a href="https://pedrinholeda.github.io/">
           <span>Pedro Léda.</span>
         </a>

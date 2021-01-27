@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import styled from "styled-components";
 
-const QuizLogo = styled.div`
+const Logo = styled.div`
   margin: auto;
   display: block;
 
@@ -20,13 +20,13 @@ const QuizLogo = styled.div`
   }
 `;
 
-export default function Logo(props) {
+export default function QuizLogo(props) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <QuizLogo {...props}>
+    <Logo {...props}>
       <a href="https://pedrinholeda.github.io">
         <img src="https://i.imgur.com/C1QbPM7.png" alt="Logo Quiz" />
       </a>
-    </QuizLogo>
+    </Logo>
   );
 }
