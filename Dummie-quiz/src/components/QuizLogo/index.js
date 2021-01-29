@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Logo = styled.div`
   margin: auto;

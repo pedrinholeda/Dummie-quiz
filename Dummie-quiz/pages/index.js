@@ -42,10 +42,10 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-          <title>Dummie Quiz</title>
-        </Head>
+        <title>Dummie Quiz</title>
+      </Head>
       <QuizContainer>
-      <QuizLogo />
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1> The Dummie Quiz</h1>
@@ -59,7 +59,7 @@ export default function Home() {
                 console.log('teste');
               }}
             >
-               <Input
+              <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
                 placeholder="Diz ai seu nome"
