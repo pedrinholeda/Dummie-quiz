@@ -1,8 +1,8 @@
 {
     "bg": "https://68.media.tumblr.com/867302c89bec5b652df49eeab894d048/tumblr_oide5vzsmr1rs0w1ho1_500.gif",
     "logo":"https://i.imgur.com/C1QbPM7.png",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "title": "The Dummie Quiz",
+    "description": "O quiz sobre conhecimentos gerais inuteis",
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
@@ -17,13 +17,13 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
+        "image": "https://i.imgur.com/BlhEdUQ.gif",
+        "title": "Quem é a pessoa que tem a maior cabeça do mundo?",
         "description": "Faz tempo em haha",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Lorrane",
+           "Megamente"
         ]
       }
     ],
