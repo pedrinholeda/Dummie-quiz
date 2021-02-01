@@ -5,7 +5,7 @@
     "description": "O quiz sobre conhecimentos gerais inuteis",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "image": "https://media.giphy.com/media/pDdzX4l9jqA80/giphy.gif",
         "title": "Sofre de hipopotomonstrosesquipedaliofobia quem tem medo de...",
         "description": "tive que usar Ctrl+C e Ctrl+V nessa palavra",
         "answer": 2,
@@ -17,13 +17,87 @@
         ]
       },
       {
-        "image": "https://i.imgur.com/BlhEdUQ.gif",
-        "title": "Quem é a pessoa que tem a maior cabeça do mundo?",
-        "description": "Faz tempo em haha",
+        "image": "https://media.giphy.com/media/eSQKNSmg07dHq/giphy.gif",
+        "title": "O estrogonofe é um prato originário de qual país?",
+        "description": "Trás a Coquinha gelada",
+        "answer": 3,
+        "alternatives": [
+           "China",
+           "Brasil",
+           "Chile",
+           "Russia"
+        ]
+      }
+      ,
+      {
+        "image": "https://media.giphy.com/media/26u4ltSAwnEb0Hpwk/giphy.gif",
+        "title": "A Bagheera kiplingi é uma espécie de aranha conhecida por ser:",
+        "description": "*Arrepios*",
+        "answer": 1,
+        "alternatives": [
+           "Dançarina",
+           "Vegetariana",
+           "Assasina",
+           "Espinhosa"
+        ]
+      }
+      ,
+      {
+        "image": "https://media.giphy.com/media/81xwEHX23zhvy/giphy.gif",
+        "title": "Qual o alimento mais roubado do mundo ?",
+        "description": "Google pesquisar",
         "answer": 0,
         "alternatives": [
-           "Lorrane",
-           "Megamente"
+           "Queijo",
+           "Carne",
+           "Pizza",
+           "Pão"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/PaBjTa3kmkSWs/giphy.gif",
+        "title": "Três desses rios fluem no sentido norte e sul, e apenas um flui no sentido leste e oeste, Qual?",
+        "description": "Google pesquisar novamente",
+        "answer": 0,
+        "alternatives": [
+           "Rio Amazonas",
+           "Rio Nilo",
+           "Rio Mekong",
+           "Rio Mississippi"
+        ]
+      },{
+        "image": "https://media.giphy.com/media/3og0IOo5JDkLw3mPF6/giphy.gif",
+        "title": "Quem foi o artista que esculpiu David (ou davi) ?",
+        "description": "Só testando aqui",
+        "answer": 1,
+        "alternatives": [
+           "Michaelangelo",
+           "Michelangelo",
+           "Micaelangelo",
+           "Michelagelo"
+        ]
+      },{
+        "image": "https://media.giphy.com/media/NqB4UMtgTY4p6XYrtJ/giphy.gif",
+        "title": "A medalha de Caldecott é um prêmio de reconhecimento destinado a...",
+        "description": "Bem útil",
+        "answer": 3,
+        "alternatives": [
+           "Autores",
+           "Novelistas",
+           "Poetas",
+           "Ilustradores"
+        ]
+      }
+      ,{
+        "image": "https://media.giphy.com/media/xmYbQrxezZkmk/giphy.gif",
+        "title": "Anatidaefobia é o medo de ser observado ou perseguido por:",
+        "description": "Fobiasss",
+        "answer": 2,
+        "alternatives": [
+           "Macacos",
+           "Baratas",
+           "Patos",
+           "Peixes"
         ]
       }
     ],
