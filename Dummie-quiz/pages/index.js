@@ -69,7 +69,7 @@ export default function Home() {
                 {`Vamos Jogar ${name}`}
               </Button>
             </form>
-            <p>O quiz sobre conhecimentos gerais inuteis.</p>
+            <p>O quiz aleatorio sobre conhecimentos gerais mais inuteis... ou não.</p>
           </Widget.Content>
         </Widget>
         <Widget>

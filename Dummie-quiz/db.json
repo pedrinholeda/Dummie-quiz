@@ -99,6 +99,28 @@
            "Patos",
            "Peixes"
         ]
+      },{
+        "image": "https://media.giphy.com/media/DURbX7oesHiaA/giphy.gif",
+        "title": "Qual o nome do menor osso do corpo humano ?",
+        "description": "Essa eu sei",
+        "answer": 0,
+        "alternatives": [
+           "Estribo",
+           "Patela",
+           "Fíbula",
+           "Tíbia"
+        ]
+      },{
+        "image": "https://media.giphy.com/media/l3vQZ7KkT2e07Lcqc/giphy.gif",
+        "title": "Quantos dentes tem os mosquitos ?",
+        "description": "Gente...",
+        "answer": 2,
+        "alternatives": [
+           "45",
+           "46",
+           "47",
+           "48"
+        ]
       }
     ],
     "external": [
