@@ -6,14 +6,14 @@
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
+        "title": "Sofre de hipopotomonstrosesquipedaliofobia quem tem medo de...",
+        "description": "tive que usar Ctrl+C e Ctrl+V nessa palavra",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Hipopótamos",
+          "Cavalos",
+          "Palavras grandes",
+          "Coisas geladas"
         ]
       },
       {
