@@ -95,7 +95,7 @@ function QuestionWidget({
   const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
-  const hasAlternativeSelected = selectedAlternative !== undefined;
+  //const hasAlternativeSelected = selectedAlternative !== undefined;
 
   return (
     <Widget>
@@ -164,7 +164,7 @@ function QuestionWidget({
           {/* <pre>
             {JSON.stringify(question, null, 4)}
           </pre> */}
-          <Button type="submit" disabled={!hasAlternativeSelected}>
+          <Button type="submit">
             Confirmar
           </Button>
           {isQuestionSubmited && isCorrect && (
