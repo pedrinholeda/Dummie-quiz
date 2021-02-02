@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/prop-types */
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -19,37 +21,41 @@ function ResultWidget({ results }) {
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado:
+        <h1>Seu resultado:</h1>
       </Widget.Header>
 
       <Widget.Content>
-        <p>
-          Você acertou
+        <img
+          style={{ width: '100%' }}
+          src="https://media.giphy.com/media/Q66ZEIpjEQddUOOKGW/giphy.gif"
+        />
+        <h3>
+          Você fez
           {' '}
-          {/* {results.reduce((somatoriaAtual, resultAtual) => {
+          {results.reduce((somatorioAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
             if (isAcerto) {
-              return somatoriaAtual + 1;
+              return somatorioAtual + 1;
             }
-            return somatoriaAtual;
-          }, 0)} */}
-          {results.filter((x) => x).length}
+            return somatorioAtual;
+          }, 0)}
           {' '}
-          perguntas
-        </p>
-        <ul>
-          {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              #
-              {index + 1}
-              {' '}
-              Resultado:
-              {result === true
-                ? 'Acertou'
-                : 'Errou'}
-            </li>
-          ))}
-        </ul>
+          ponto(s)!
+        </h3>
+
+        <a href="/">
+          <Button type="submit" style={{ marginTop: '20px' }}>
+            Jogar de Novo
+          </Button>
+        </a>
+        <a
+          href="https://aluraquiz-base.alura-challenges.vercel.app/contribuidores"
+          target="_blank"
+        >
+          <Button type="submit" style={{ marginTop: '20px' }}>
+            Divirta-se com mais Quizes!
+          </Button>
+        </a>
       </Widget.Content>
     </Widget>
   );
@@ -58,16 +64,18 @@ function ResultWidget({ results }) {
 function LoadingWidget() {
   return (
     <Widget>
-      <Widget.Header>
-        Carregando...
-      </Widget.Header>
+      <Widget.Header>Carregando...</Widget.Header>
 
       <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
         <Lottie
           width="200px"
           height="200px"
           className="lottie-container basic"
-          config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+          config={{
+            animationData: loadingAnimation,
+            loop: true,
+            autoplay: true,
+          }}
         />
       </Widget.Content>
     </Widget>
@@ -81,7 +89,9 @@ function QuestionWidget({
   onSubmit,
   addResult,
 }) {
-  const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
+  const [selectedAlternative, setSelectedAlternative] = React.useState(
+    undefined,
+  );
   const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
@@ -129,6 +139,7 @@ function QuestionWidget({
             const alternativeId = `alternative__${alternativeIndex}`;
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
             const isSelected = selectedAlternative === alternativeIndex;
+
             return (
               <Widget.Topic
                 as="label"
@@ -138,11 +149,12 @@ function QuestionWidget({
                 data-status={isQuestionSubmited && alternativeStatus}
               >
                 <input
-                  style={{ display: 'none' }}
+                  // style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
                   onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
+                  style={{ display: 'none' }}
                 />
                 {alternative}
               </Widget.Topic>
@@ -155,8 +167,30 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          {isQuestionSubmited && isCorrect && (
+          <div style={{ textAlign: 'center' }}>
+            <p style={{ marginTop: '20px', fontSize: '15px' }}>Isso aí, você acertou!</p>
+            <span style={{
+              display: 'inline-block', borderRadius: '50%', overflow: 'hidden', width: '100px', height: '100px',
+            }}
+            >
+              {/* eslint-disable-next-line jsx-a11y/alt-text */}
+              <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="https://media.giphy.com/media/DffShiJ47fPqM/giphy.gif" />
+            </span>
+          </div>
+          )}
+          {isQuestionSubmited && !isCorrect && (
+          <div style={{ textAlign: 'center' }}>
+            <p style={{ marginTop: '20px', fontSize: '15px' }}>Que pena, você errou!</p>
+            <span style={{
+              display: 'inline-block', borderRadius: '50%', overflow: 'hidden', width: '100px', height: '100px',
+            }}
+            >
+              {/* eslint-disable-next-line jsx-a11y/alt-text */}
+              <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="https://media.giphy.com/media/Ty9Sg8oHghPWg/giphy.gif" />
+            </span>
+          </div>
+          )}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
@@ -179,10 +213,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
   function addResult(result) {
     // results.push(result);
-    setResults([
-      ...results,
-      result,
-    ]);
+    setResults([...results, result]);
   }
 
   // [React chama de: Efeitos || Effects]
@@ -194,7 +225,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
     }, 1 * 2000);
-  // nasce === didMount
+    // nasce === didMount
   }, []);
 
   function handleSubmitQuiz() {
@@ -222,7 +253,9 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT && (
+          <ResultWidget results={results} />
+        )}
       </QuizContainer>
     </QuizBackground>
   );
