@@ -1,7 +1,6 @@
 # Dummie-quiz
 
 ## 📋 Descrição
-Hey Devs!
 
 A [#ImersãoReact versão Next.js](https://www.alura.com.br/imersao-react-next-js/) foi uma maratona de aulas da Alura para iniciantes criarem sua primeira aplicação web com React e Next.js montando um quiz temático.
 
