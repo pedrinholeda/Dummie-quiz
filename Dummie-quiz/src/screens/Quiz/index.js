@@ -239,6 +239,9 @@ export default function QuizPage({ externalQuestions, externalBg }) {
         <QuizLogo />
         {screenState === screenStates.QUIZ && (
           <QuestionWidget
+            // A new key per question remounts the form, so no radio stays
+            // checked from the previous question.
+            key={questionIndex}
             question={question}
             questionIndex={questionIndex}
             totalQuestions={totalQuestions}

@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run"
   },
   "dependencies": {
     "framer-motion": "^14.14.0",
@@ -17,8 +18,12 @@
     "styled-components": "^6.6.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.13",
     "eslint": "^10.15.0",
-    "eslint-config-next": "^16.4.6"
+    "eslint-config-next": "^16.4.6",
+    "jsdom": "^31.0.1",
+    "vitest": "^5.1.1"
   },
   "license": "MIT",
   "private": true,
