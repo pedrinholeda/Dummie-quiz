@@ -48,3 +48,7 @@ starting at 0).
 
 Next.js 16 (pages router), React 19, styled-components 6, Framer Motion and Lottie. Deployed
 on Vercel from the `Dummie-quiz/` folder.
+
+## License
+
+[MIT](LICENSE)
