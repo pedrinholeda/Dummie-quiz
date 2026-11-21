@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+ 
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
@@ -27,7 +27,7 @@ const FooterWrapper = styled.footer`
 
 export default function Footer(props) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
+     
     <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
         <img
