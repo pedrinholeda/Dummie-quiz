@@ -1,6 +1,6 @@
-/* eslint-disable react/react-in-jsx-scope */
+ 
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-// eslint-disable-next-line import/no-unresolved
+ 
 import Head from 'next/head';
 import db from '../db.json';
 
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
 
 const { theme } = db;
 
-// eslint-disable-next-line react/prop-types
+ 
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        { }
         <Component {...pageProps} />
       </ThemeProvider>
     </>

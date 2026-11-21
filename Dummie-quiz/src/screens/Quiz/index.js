@@ -1,20 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable react/prop-types */
+ 
+ 
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Lottie } from '@crello/react-lottie';
+import { Lottie } from 'lottie-react';
 // import db from '../../../db.json';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
-// eslint-disable-next-line import/no-named-as-default
+ 
 import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
-// eslint-disable-next-line import/no-unresolved
+ 
 import loadingAnimation from './animations/loading.json';
 
 function ResultWidget({ results }) {
@@ -68,14 +67,11 @@ function LoadingWidget() {
 
       <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
         <Lottie
-          width="200px"
-          height="200px"
+          style={{ width: '200px', height: '200px' }}
           className="lottie-container basic"
-          config={{
-            animationData: loadingAnimation,
-            loop: true,
-            autoplay: true,
-          }}
+          src={loadingAnimation}
+          loop
+          autoplay
         />
       </Widget.Content>
     </Widget>
@@ -174,7 +170,7 @@ function QuestionWidget({
               display: 'inline-block', borderRadius: '50%', overflow: 'hidden', width: '100px', height: '100px',
             }}
             >
-              {/* eslint-disable-next-line jsx-a11y/alt-text */}
+              { }
               <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="https://media.giphy.com/media/DffShiJ47fPqM/giphy.gif" />
             </span>
           </div>
@@ -186,7 +182,7 @@ function QuestionWidget({
               display: 'inline-block', borderRadius: '50%', overflow: 'hidden', width: '100px', height: '100px',
             }}
             >
-              {/* eslint-disable-next-line jsx-a11y/alt-text */}
+              { }
               <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="https://media.giphy.com/media/Ty9Sg8oHghPWg/giphy.gif" />
             </span>
           </div>
