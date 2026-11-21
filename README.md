@@ -1,28 +1,50 @@
-# Dummie-quiz
+# The Dummie Quiz
 
-## 📋 Descrição
+A ten-question quiz of useless general knowledge (or is it?), with a reaction GIF after every
+answer and a score at the end. Questions are in Portuguese.
 
-Link do Quiz: https://dummie-quiz.vercel.app/
+**Play it:** https://dummie-quiz.vercel.app/
 
-- Deployado pela Vercel
+Built during Alura's *Imersão React – Next.js* week, then kept up to date.
 
-A [#ImersãoReact versão Next.js](https://www.alura.com.br/imersao-react-next-js/) foi uma maratona de aulas da Alura para iniciantes criarem sua primeira aplicação web com React e Next.js montando um quiz temático.
+## How it plays
 
-A ideia do tema Dummie-quiz vem de questoes de conhecimentos gerais aleatorias e com base nos conteúdos das aulas foi desenvolvida a tela principal que captura o nome de quem irá responder o quiz só permitindo acesso depois de preenchido e contém também uma lista com quizes de outras pessoas com o tema próximo ao meu. Nas telas de quiz temos as perguntas com 4 alternativas cada e quando o jogador seleciona e confirma sua resposta é mostrado a ele um gif de reação que muda se a resposta está certa ou não. Na tela final temos a contagem geral de pontos relativa aos acertos que o jogador teve e é possível jogar novamente ou visitar a Vitrine de Projetos da Imersão.
+1. Type your name on the home page to unlock the quiz.
+2. Each question has four alternatives. Pick one and confirm: a GIF tells you whether you got
+   it right.
+3. The last screen shows your score, with buttons to play again or browse other quizzes
+   made during the course.
 
-Nesse repositório está o projeto que desenvolvi para aprender e fixar os conhecimentos adquiridos na Imersão. 
+The home page also lists quizzes by other participants; opening one loads its questions from
+that project's `/api/db` endpoint.
 
-=)
+## Run it locally
 
-## 🖥️ Tecnologias
+Requires Node.js 22+.
 
-- CSS
-- JavaScript
-- React
-- Next.js
+```bash
+cd Dummie-quiz
+npm ci
+npm run dev
+```
 
+Open http://localhost:3000.
 
-## 🎨 Projetos
-*✓ Finalizado*
+| command | what it does |
+|---|---|
+| `npm run dev` | development server |
+| `npm run build` / `npm start` | production build and server |
+| `npm run lint` | ESLint with the Next.js config |
+| `npm test` | Vitest + Testing Library |
 
-Dummie Quiz. Um quiz sobre conhecimentos gerais inuteis, ou não.
+## Change the questions
+
+Everything the quiz shows lives in [`Dummie-quiz/db.json`](Dummie-quiz/db.json): title,
+background, theme colors and the questions. Each question has an `image`, a `title`, a
+`description`, the `alternatives` and the `answer` (the index of the right alternative,
+starting at 0).
+
+## Stack
+
+Next.js 16 (pages router), React 19, styled-components 6, Framer Motion and Lottie. Deployed
+on Vercel from the `Dummie-quiz/` folder.
