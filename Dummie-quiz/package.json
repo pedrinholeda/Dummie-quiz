@@ -29,5 +29,6 @@
   "private": true,
   "engines": {
     "node": ">=22"
-  }
+  },
+  "author": "Pedro Leda"
 }
